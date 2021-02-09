@@ -8,7 +8,9 @@ if (navigator.geolocation) {
 			var lng = position.coords.longitude;
 
 			alert(lat + " , " + lng);
-
+			let element = document.createElement('h1');
+			element.textContent = lat + ' ,' + lng;
+			document.body.appendChild(element);
 		}, function(error) {
 			clearTimeout(location_timeout);
 			geolocFail();
